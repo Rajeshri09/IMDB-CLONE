@@ -1,36 +1,92 @@
-## React
-
-This is a simple React application. This application serves as a basic template for a react applications.  
-This project is bootstrapped with [Vite](https://vitejs.dev/guide/).
-
-## How to run
-
-1. Before running the application, make sure all dependencies are installed. To install dependencies, run following command in terminal:
-   ```sh
-   npm install
+### **Step 1: Initialize Git in Your Project Folder**
+1. Open your terminal or command prompt.
+2. Navigate to your project folder using:  
+   ```bash
+   cd path/to/your/project
+   ```
+3. Initialize Git:  
+   ```bash
+   git init
    ```
 
-2. Once dependencies are installed, run the following command to start the application:
-   ```sh
-   npm run dev
+### **Step 2: Connect to GitHub**
+1. Go to **GitHub** and create a **new repository** (without README, `.gitignore`, or license).
+2. Copy the **repository URL**.
+
+3. Add your remote repository:
+   ```bash
+   git remote add origin your-repository-url
    ```
 
-3. Refresh the URL in simple browser to see the output. As shown below 
-   ![](https://static.onecompiler.com/images/posts/3zzkbysj7/studio-react-vite-reload.png)
+### **Step 3: Add and Commit Your Files**
+1. Add all files:  
+   ```bash
+   git add .
+   ```
+2. Commit your changes:  
+   ```bash
+   git commit -m "Initial commit - IMDB Project"
+   ```
 
+### **Step 4: Push to GitHub**
+1. If your branch is `main`:
+   ```bash
+   git branch -M main
+   ```
+2. Push your code:  
+   ```bash
+   git push -u origin main
+   ```
 
-## FAQs & Debugging
+---
 
- ### 1. I do not see browser in my workspace
- Studio will automatically open the app in a new browser tab. If not, you can use the following steps to open the simple browser 
+### **Step 5: Create a README File**
+1. Create a `README.md` file in your project folder:
+   ```bash
+   touch README.md
+   ```
+2. Open `README.md` and add project details:
+   ```markdown
+   # IMDB Clone (ReactJS)
 
-1. From VS Code command pallette(`Ctrl/Cmd + Shift + P`), run **Studio Manager: SimpleBrowser Default URL** command. This will open the app in a new browser tab.
+   ## 📌 Overview
+   A mini IMDB clone built using ReactJS, fetching movie data from the OMDB API. The app allows users to search for movies dynamically, view details, and save favorite movies.
 
-2. Your app runs on hosted env which can be accessed using host id, port provided in file **.vsocde/.studio/studio-env.json**. Use values to create the URL as follows:
-   `https://<STUDIO_HOST_ID>-3000.ocws.app`
+   ## 🚀 Features
+   - **Real-time search** (movies appear as you type, like Google search)
+   - **Movie details page** (displays movie name, photo, plot, etc.)
+   - **Favorites page** (stores favorite movies, even after refresh)
+   - **Styled using CSS**
+   - **Hosted on Bytexl**
 
- ### 2. Getting `vite: not found` error
- This means node_modules are missing in your workspace, please refer the 'How to run' section and make sure you have followed the steps in sequence
+   ## 🔗 Live Demo
+   [Click here to view the project](your-hosted-url)
 
- ### 3. Can I use create-react-app instead Vite?
- Yes, you can use create-react-app instead Vite, the default workspace is loaded with Vite setup, you can remove the Vite dependencies, add create-react-app dependencies and update the scripts to start using create-react-app.
+   ## 📦 Setup Instructions
+   1. Clone the repository:
+      ```bash
+      git clone your-repository-url
+      ```
+   2. Install dependencies:
+      ```bash
+      npm install
+      ```
+   3. Run the app:
+      ```bash
+      npm start
+      ```
+   ```
+
+### **Step 6: Push README to GitHub**
+1. Add and commit the file:
+   ```bash
+   git add README.md
+   git commit -m "Added README file"
+   ```
+2. Push to GitHub:
+   ```bash
+   git push origin main
+   ```
+
+---
+
