@@ -1,0 +1,256 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Arial', sans-serif;
+  color: #ffffff;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+body::before {
+  content: "";
+  position: fixed; /* Keeps the background fixed while allowing scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url('https://image.cnbcfm.com/api/v1/image/104768589-movies-anywhere.JPG?v=1507816437&w=1920&h=1080');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3; /* Adjust for desired transparency */
+  z-index: -1;
+}
+
+
+
+/* Centering Wrapper */
+.center-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Main App Container */
+.app {
+  max-width: 1200px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* IMDb Header */
+.imdb-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.imdb-logo-img {
+  width: 150px;
+  height: auto;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.imdb-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #f5c518;
+  text-shadow: 3px 3px 15px rgba(245, 197, 24, 0.7);
+  margin-top: 10px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #1e1e1e;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #f5c518;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+/* Search Bar */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.search-input {
+  padding: 12px;
+  width: 300px;
+  border: 2px solid #f5c518;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  background-color: #222;
+  color: white;
+  font-size: 1rem;
+}
+
+.search-button {
+  padding: 12px;
+  background-color: #f5c518;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.search-button:hover {
+  background-color: #e5b507;
+  transform: scale(1.1);
+}
+
+/* Movies Container */
+.movies-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  padding: 10px;
+  justify-content: center;
+  overflow: auto; /* Allows scrolling */
+  max-height: 80vh; /* Ensures it doesn't take the full viewport height */
+}
+
+
+/* Movie Card */
+.movie-card {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(245, 197, 24, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.movie-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 12px rgba(245, 197, 24, 0.6);
+}
+
+.movie-poster {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.movie-info {
+  padding: 10px;
+  text-align: center;
+}
+
+.movie-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #f5c518;
+  margin: 10px 0;
+}
+
+.movie-year {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+/* Favorite Button */
+.favorite-button {
+  display: inline-block;
+  background-color: #f5c518;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 100%;
+}
+
+.favorite-button:hover {
+  background-color: #e5b507;
+  transform: scale(1.05);
+}
+
+.favorite-button:disabled {
+  background-color: #666;
+  cursor: not-allowed;
+}
+
+/* Favorite Movies Page */
+.favorites-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.favorites-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f5c518;
+  margin-bottom: 20px;
+}
+
+.favorites-list {
+  list-style: none;
+  padding: 0;
+}
+
+.favorites-list li {
+  background: #1e1e1e;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(245, 197, 24, 0.3);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #1e1e1e;
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-top: 30px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
