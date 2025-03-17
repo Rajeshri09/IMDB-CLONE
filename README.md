@@ -60,6 +60,7 @@
    - **Hosted on Bytexl**
 
    ## 🔗 Live Demo
+   https://2211cs050090.bytexl.live/
    [Click here to view the project](your-hosted-url)
 
    ## 📦 Setup Instructions
